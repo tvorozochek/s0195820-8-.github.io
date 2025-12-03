@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <button class="but">Открыть форму</button>
+
+    <div class="form-back hidden">
+
+        <form action="" class="form">
+
+            <h2 class="form-title">Обратная связь</h2>
+
+            <label for="fio" class="form-l">ФИО</label>
+            <input type="text" class="form-inp" name="fio" id="fio" required>
+            
+            <label for="mail" class="form-l">Электронная почта</label>
+            <input type="email" class="form-inp" name="mail" id="mail" required>
+
+            <label for="phone" class="form-l">Номер телефона</label>
+            <input type="tel" class="form-inp" name="phone" id="phone" required>
+
+            <label for="org" class="form-l">Организация</label>
+            <input type="text" class="form-inp" name="org" id="org" required>
+
+            <label for="mes" class="form-l">Сообщение</label>
+            <textarea class="form-inp form-textarea" name="mes" id="mes" required></textarea>
+
+            <div class="form-chek-place">
+                <input type="checkbox" class="form-chek" name="chek" id="chek" required>
+                <label for="chek" class="form-l">Согласен на обработку данных</label>
+            </div>
+
+            <input type="submit" class="form-but" value="Отправить" >
+
+        </form>
+
+    </div>
+
+</body>
+</html>

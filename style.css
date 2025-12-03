@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #bdd7ff, #e2e2e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Кнопка открытия формы */
+.but{
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #007aff;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #00000025;
+    transition: 0.25s;
+}
+
+.but:hover{
+    background-color: #0064d4;
+    transform: translateY(-2px);
+}
+
+/* Затемнение */
+.form-back{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.25s ease;
+}
+
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+}
+
+/* Форма */
+.form{
+    width: 92%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 14px;
+    background-color: #fff;
+
+    box-shadow: 0 8px 20px #00000030;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.form-l{
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+}
+
+.form-inp{
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.form-textarea{
+    resize: none;
+    height: 80px;
+}
+
+.form-inp:focus{
+    border-color: #007aff;
+    box-shadow: 0 0 0 3px #007aff33;
+    outline: none;
+}
+
+/* Чекбокс */
+.form-chek-place{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.form-chek{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-chek-place label
+{
+    margin: 0;
+}
+
+/* Кнопка отправки */
+.form-but{
+    padding: 10px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #007aff;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.form-but:hover{
+    background-color: #0064d4;
+    transform: translateY(-2px);
+}
+
+/* Мобильная адаптация */
+@media (max-height: 600px){
+    .form{
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+}
